@@ -11,6 +11,7 @@ public class Park extends Place {
     public Park(String name, GeographicCoordinate geographicCoordinate, Text description, List<Hotel>  approximate_hotels,List<Review> reviewList) {
         super(name, geographicCoordinate, description,reviewList);
         this.approximate_hotels = approximate_hotels;
+        this.reviewList = reviewList;
 
     }
 
