@@ -48,4 +48,7 @@ public abstract class Place {
         this.customerOpinionList = customerOpinionList;
 
     }
+    public void addOpinion(List<CustomerOpinion> customerOpinionList){
+        this.customerOpinionList.addAll(customerOpinionList);
+    }
 }
