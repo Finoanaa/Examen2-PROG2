@@ -8,7 +8,7 @@ public abstract class Place {
     private String name;
     private GeographicCoordinate geographicCoordinate;
     private Text description;
-
+    private List<CustomerOpinion> customerOpinionList;
     public String getName() {
         return name;
     }
@@ -33,10 +33,19 @@ public abstract class Place {
         this.description = description;
     }
 
-    public Place(String name, GeographicCoordinate geographicCoordinateList, Text description) {
+    public List<CustomerOpinion> getCustomerOpinionList() {
+        return customerOpinionList;
+    }
+
+    public void setCustomerOpinionList(List<CustomerOpinion> customerOpinionList) {
+        this.customerOpinionList = customerOpinionList;
+    }
+
+    public Place(String name, GeographicCoordinate geographicCoordinateList, Text description, List<CustomerOpinion> customerOpinionList) {
         this.name = name;
         this.geographicCoordinate = geographicCoordinateList;
         this.description = description;
+        this.customerOpinionList = customerOpinionList;
 
     }
 }
