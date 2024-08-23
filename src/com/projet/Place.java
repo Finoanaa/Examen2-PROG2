@@ -2,13 +2,14 @@ package com.projet;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Place {
     private String name;
     private GeographicCoordinate geographicCoordinate;
     private Text description;
-    private List<CustomerOpinion> customerOpinionList;
+    private List<Review> reviewList = new ArrayList<>();
     public String getName() {
         return name;
     }
@@ -33,22 +34,18 @@ public abstract class Place {
         this.description = description;
     }
 
-    public List<CustomerOpinion> getCustomerOpinionList() {
-        return customerOpinionList;
+    public List<Review> reviewList() {
+        return reviewList;
     }
 
-    public void setCustomerOpinionList(List<CustomerOpinion> customerOpinionList) {
-        this.customerOpinionList = customerOpinionList;
-    }
-
-    public Place(String name, GeographicCoordinate geographicCoordinateList, Text description, List<CustomerOpinion> customerOpinionList) {
+    public Place(String name, GeographicCoordinate geographicCoordinateList, Text description, List<Review> reviewList) {
         this.name = name;
         this.geographicCoordinate = geographicCoordinateList;
         this.description = description;
-        this.customerOpinionList = customerOpinionList;
+        this.reviewList= reviewList;
 
     }
-    public void addOpinion(List<CustomerOpinion> customerOpinionList){
-        this.customerOpinionList.addAll(customerOpinionList);
+    public void addReview(List<Review> reviewList){
+        this.reviewList.addAll(reviewList);
     }
 }

@@ -7,8 +7,8 @@ import java.util.List;
 public class Hotel extends Place{
     private Contact contact;
     private List<Room> roomList;
-    public Hotel(String name, GeographicCoordinate geographicCoordinate, Text description,List<CustomerOpinion> customerOpinionList, Contact contact, List<Room> roomList) {
-        super(name, geographicCoordinate, description, customerOpinionList);
+    public Hotel(String name, GeographicCoordinate geographicCoordinate, Text description,List<Review> reviewList, Contact contact, List<Room> roomList) {
+        super(name, geographicCoordinate, description, reviewList);
         this.contact = contact;
         this.roomList = roomList;
     }
@@ -60,8 +60,8 @@ public class Hotel extends Place{
     }
 
     @Override
-    public void addOpinion(List<CustomerOpinion> customerOpinionList) {
-        super.addOpinion(customerOpinionList);
+    public void addReview(List<Review> reviewList) {
+        super.addReview(reviewList);
     }
 
     @Override
