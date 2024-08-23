@@ -6,7 +6,7 @@ import java.util.List;
 public class Room {
     private String number;
     private int amountPerNight;
-    private List<CustomerOpinion> customerOpinionList = new ArrayList<>();
+    private List<Review> reviewList = new ArrayList<>();
 
     public String getNumber() {
         return number;
@@ -24,22 +24,16 @@ public class Room {
         this.amountPerNight = amountPerNight;
     }
 
-    public List<CustomerOpinion> getCustomerOpinionList() {
-        return customerOpinionList;
+    public List<Review> getReviewList() {
+        return reviewList;
     }
 
-    public void setCustomerOpinionList(List<CustomerOpinion> customerOpinionList) {
-        this.customerOpinionList = customerOpinionList;
+    public void setReviewList(List<Review> reviewList) {
+        this.reviewList = reviewList;
     }
 
-    public Room(String number, int amountPerNight) {
-        this.number = number;
-        this.amountPerNight = amountPerNight;
-
+    public void addReview(List<Review> reviewList){
+        this.reviewList.addAll(reviewList);
     }
-    public void addOpinion(List<CustomerOpinion> customerOpinionList){
-        this.customerOpinionList.addAll(customerOpinionList);
-    }
-
 }
 

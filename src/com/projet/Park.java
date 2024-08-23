@@ -6,25 +6,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Park extends Place {
-    private List<Hotel> hotelList;
+    private List<Hotel> approximate_hotels = new ArrayList<>();
     private List<Review> reviewList = new ArrayList<>();
-    public Park(String name, GeographicCoordinate geographicCoordinate, Text description, List<Hotel> hotelList,List<Review> reviewList) {
+    public Park(String name, GeographicCoordinate geographicCoordinate, Text description, List<Hotel>  approximate_hotels,List<Review> reviewList) {
         super(name, geographicCoordinate, description,reviewList);
-        this.hotelList = hotelList;
-    }
-    public List<Hotel> getHotelList() {
-        return hotelList;
-    }
-    public void setHotelList(List<Hotel> hotelList) {
-        this.hotelList = hotelList;
+        this.approximate_hotels = approximate_hotels;
 
     }
 
-    public List<Review> getCustomerOpinionList() {
+    public List<Hotel> getApproximate_hotels() {
+        return approximate_hotels;
+    }
+
+    public void setApproximate_hotels(List<Hotel> approximate_hotels) {
+        this.approximate_hotels = approximate_hotels;
+    }
+
+    public List<Review> getReviewList() {
         return reviewList;
     }
 
-    public void setCustomerOpinionList(List<Review> reviewList) {
+    public void setReviewList(List<Review> reviewList) {
         this.reviewList = reviewList;
     }
 
