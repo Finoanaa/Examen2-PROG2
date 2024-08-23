@@ -7,9 +7,9 @@ import java.util.List;
 
 public class Park extends Place {
     private List<Hotel> hotelList;
-    private List<CustomerOpinion> customerOpinionList = new ArrayList<>();
-    public Park(String name, GeographicCoordinate geographicCoordinate, Text description, List<Hotel> hotelList,List<CustomerOpinion> customerOpinionList) {
-        super(name, geographicCoordinate, description,customerOpinionList);
+    private List<Review> reviewList = new ArrayList<>();
+    public Park(String name, GeographicCoordinate geographicCoordinate, Text description, List<Hotel> hotelList,List<Review> reviewList) {
+        super(name, geographicCoordinate, description,reviewList);
         this.hotelList = hotelList;
     }
     public List<Hotel> getHotelList() {
@@ -20,12 +20,12 @@ public class Park extends Place {
 
     }
 
-    public List<CustomerOpinion> getCustomerOpinionList() {
-        return customerOpinionList;
+    public List<Review> getCustomerOpinionList() {
+        return reviewList;
     }
 
-    public void setCustomerOpinionList(List<CustomerOpinion> customerOpinionList) {
-        this.customerOpinionList = customerOpinionList;
+    public void setCustomerOpinionList(List<Review> reviewList) {
+        this.reviewList = reviewList;
     }
 
     @Override
@@ -58,12 +58,12 @@ public class Park extends Place {
         super.setDescription(description);
     }
 
-    public Park(String name, GeographicCoordinate geographicCoordinateList, Text description, List<CustomerOpinion> customerOpinionList) {
-        super(name, geographicCoordinateList, description, customerOpinionList);
+    public Park(String name, GeographicCoordinate geographicCoordinateList, Text description, List<Review> reviewList) {
+        super(name, geographicCoordinateList, description, reviewList);
     }
 
     @Override
-    public void addOpinion(List<CustomerOpinion> customerOpinionList) {
-        super.addOpinion(customerOpinionList);
+    public void addReview(List<Review> reviewList) {
+        super.addReview(reviewList);
     }
 }
