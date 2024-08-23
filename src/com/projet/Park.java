@@ -6,13 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Park extends Place {
-    private List<Hotel> approximate_hotels = new ArrayList<>();
+    private List<Hotel> approximate_hotels = new ArrayList<>(); //approximate_hotels are the hotel that have the same GeographicCoordinate of park
     private List<Review> reviewList = new ArrayList<>();
     public Park(String name, GeographicCoordinate geographicCoordinate, Text description, List<Hotel>  approximate_hotels,List<Review> reviewList) {
         super(name, geographicCoordinate, description,reviewList);
         this.approximate_hotels = approximate_hotels;
         this.reviewList = reviewList;
-
     }
 
     public List<Hotel> getApproximate_hotels() {
