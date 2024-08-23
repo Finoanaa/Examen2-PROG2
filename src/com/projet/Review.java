@@ -5,18 +5,18 @@ import org.w3c.dom.Text;
 import java.time.LocalDate;
 import java.util.List;
 
-public class CustomerOpinion {
-    private List<User> userList;
+public class Review {
+    private User user;
     private int score;
     private Text opinion;
-    private LocalDate opinionDate;
+    private final LocalDate opinionDate;
 
-    public List<User> getUserList() {
-        return userList;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserList(List<User> userList) {
-        this.userList = userList;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public int getScore() {
@@ -34,26 +34,27 @@ public class CustomerOpinion {
     public void setOpinion(Text opinion) {
         this.opinion = opinion;
     }
+
     public LocalDate getOpinionDate() {
         return opinionDate;
     }
 
-    public void setOpinionDate(LocalDate opinionDate) {
-        this.opinionDate = opinionDate;
-    }
 
-    public CustomerOpinion(List<User> userList, int score, Text opinion,LocalDate opinionDate) {
-        this.userList = userList;
+    public Review(User user, int score, Text opinion,LocalDate opinionDate) {
+        this.user = user;
         this.score = score;
         this.opinion = opinion;
-        this.opinionDate = opinionDate;
+        this.opinionDate = LocalDate.now();
 
+    }
+    public List<Review> getAllReviews(List<Review> reviews) {
+        return reviews;
     }
 
     @Override
     public String toString() {
         return "CustomerOpinion{" +
-                "userList=" + userList +
+                "userList=" + user +
                 ", score=" + score +
                 ", opinion=" + opinion +
                 '}';
